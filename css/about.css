@@ -1,0 +1,126 @@
+.about-section {
+  padding: 0px 10px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 21px;
+  color: #02AEB8;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  font-weight: 300;
+  font-family: "Restore W00 Bold";
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-image {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: block;
+  margin-bottom: -4px;
+}
+
+.about-text {
+  background-color: #02AEB8;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 20px;
+  padding-bottom: 60px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  position: relative;
+  text-align: left;
+}
+
+.about-text p {
+  margin-bottom: 0;
+}
+
+/* ▶️ Play Icon */
+.play-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: white;
+  color: #02AEB8;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* 🎬 Video Modal Styles */
+.video-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;  /* ✅ স্ক্রল হলেও vertically মাঝখানে */
+  justify-content: center; /* ✅ horizontally মাঝখানে */
+  overflow: hidden; /* ✅ scroll disable */
+  backdrop-filter: blur(2px);
+}
+
+
+/* ⬛ Video Box */
+.video-content {
+  position: relative;
+  width: 90%;
+  max-width: 640px;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-content iframe {
+  width: 100%;
+  height: 360px;
+  display: block;
+}
+
+/* ❌ Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* 🔍 Zoom-In Animation */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.9s ease-out;
+}
+
+.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}

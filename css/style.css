@@ -1,0 +1,284 @@
+/* ✅ Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ---------------------- HEADER ---------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+/* ---------------------- HAMBURGER ICON ---------------------- */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ---------------------- NAVIGATION ---------------------- */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+/* ---------------------- HERO SECTION ---------------------- */
+.hero {
+  position: relative;
+  width: 90%;
+  height: 500px;
+  margin: 0px auto;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.hero-png {
+  position: absolute;
+  top: 57px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 500px;
+  z-index: 3;
+}
+
+.overlay-name {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  font-size: 160px;
+}
+
+.overlay-name h2 {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Restore W00 Bold", sans-serif;
+  white-space: nowrap;
+  font-weight: 400;
+  margin-top: 348px;
+}
+
+/* ---------------------- QUOTE SECTION ---------------------- */
+.quote-section {
+  margin-top: -40px; /* আগে ছিল -15px, এখন আরও উপরে তুললাম */
+  padding: 20px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.quote-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-card p {
+  font-size: 15px;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(-200%);
+    transition: transform 0.4s ease;
+    z-index: 99;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    transform: translateY(0%);
+  }
+
+  .hero {
+    width: 95%;
+    height: 250px;
+    margin-bottom: 50px;
+  }
+
+  .bg-img {
+    height: 95%;
+    border-radius: 40px;
+  }
+
+  .hero-png {
+    margin-bottom: 500px;
+    height: 180px;
+  }
+
+  .overlay-name {
+    top: 20%;
+  }
+
+  .overlay-name h2 {
+    font-size: 37px;
+  }
+
+  .quote-section {
+    margin-top: -20px;
+    padding: 10px 20px;
+  }
+}
+/* 🔼 Slide-Up Animation */
+.slide-up {
+  opacity: 0;
+  transform: translateY(80px); /* আগে ছিল 40px, এখন আরও নিচ থেকে উঠবে */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* সময় বাড়ানো হলো */
+}
+
+/* যখন দৃশ্যমান হবে তখন এই ক্লাস যোগ হবে */
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ✅ Floating Buttons Container */
+/* ✅ Floating Buttons Container */
+.floating-buttons {
+  position: fixed;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  right: max(20px, env(safe-area-inset-right));
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+/* ✅ Common Style for Both Buttons */
+.float-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* ✅ Fix WhatsApp Icon white underline */
+.float-btn i {
+  text-decoration: none !important;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* ✅ Hover Effect */
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ Scroll Top Button Style (Box Shape) */
+.scroll-top {
+  background-color: #02AEB8;
+  border-radius: 0px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+
+/* ✅ Scroll Top Icon align */
+.scroll-top i {
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* ✅ Default hidden */
+#scrollTopBtn {
+  display: none;
+}

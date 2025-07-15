@@ -1,0 +1,147 @@
+.custom-footer {
+  position: relative;
+  background-color: #ffffff;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+.footer-bg {
+  width: 100%;
+  display: block;
+  height: 350px; /* প্রয়োজনে height কমাও বা বাড়াও */
+  object-fit: cover;
+}
+
+/* Overlay Content */
+.footer-overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.footer-overlay-content > * {
+  pointer-events: auto;
+}
+
+.footer-logo {
+  width: 200px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.social-icons i {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.footer-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-line {
+  width: 90%;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.885);
+  margin: 10px auto;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.footer-bg {
+  width: 100%;
+  display: block;
+  height: 600px; /* ইচ্ছেমতো height এখানে কমাও */
+  object-fit: contain; /* ইমেজ কাটবে না, সম্পূর্ণ দেখাবে */
+}
+
+
+  .footer-logo {
+    width: 220px;
+    margin-top: 50px;
+  }
+
+  .social-icons {
+    font-size: 25px;
+    margin-bottom: 0px;
+    gap: 25px;
+  }
+
+  .footer-menu {
+    font-size: 14px;
+       text-align: left;
+    gap: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+/* ✅ Zoom-in Animation (Logo) */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.5); /* ⬅️ আগে ছিল 0.8 */
+  transition: all 1.2s ease-out; /* ⬅️ আগে ছিল 0.8s */
+}
+.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ✅ Slide-in Left (Text from left) */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-150px); /* ⬅️ আগে ছিল -80px */
+  transition: all 1.2s ease-out;
+}
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ✅ Slide-in Right (Text from right) */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(150px); /* ⬅️ আগে ছিল 80px */
+  transition: all 1.2s ease-out;
+}
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}

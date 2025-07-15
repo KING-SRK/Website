@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Premal Shah</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/core.css" />
+  <link rel="stylesheet" href="css/stories.css" />
+  <link rel="stylesheet" href="css/cta.css" />
+  <link rel="stylesheet" href="css/testimonial.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://db.onlinewebfonts.com/c/085720e7cc5cbefe464d010b4d52417e?family=Restore+W00+Bold" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Header Section -->
+<!-- Header Section -->
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="Premal Shah Logo" />
+  </div>
+
+  <!-- Hamburger Icon with 3 lines -->
+  <div class="menu-icon" onclick="toggleMenu(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav id="nav-links">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">CTA: Book a Free Discovery Call</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact Us</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <img src="images/bg.jpg" alt="Background" class="bg-img" />
+  <img src="images/premal.png" alt="Premal Shah" class="hero-png" />
+
+  <div class="overlay-name">
+    <h2>PREMAL SHAH</h2>
+  </div>
+</section>
+
+<!-- ✅ শুধু এই অংশে slide-up animate হবে -->
+<section class="quote-section slide-up">
+  <div class="quote-card">
+    <p>
+      “Business isn’t just about numbers – it’s about momentum. The right strategy,
+      people & mindset take you from 10x to 100x.”
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="about-section">
+  <h2>WHO IS PREMAL SHAH?</h2>
+
+  <div class="about-content">
+    <img src="images/premal-speaking.png" alt="Premal Shah Speaking" class="about-image" />
+
+    <div class="about-text">
+      <p class="zoom-in">
+        There’s theory. And then there’s Premal Shah.<br>
+        From college hustles to running successful ventures, Premal’s journey has been one of bold bets, valuable failures, and powerful comebacks.<br>
+        Today, he helps entrepreneurs decode the chaos of business with clarity and confidence.<br>
+        As a coach and mentor, Premal is known for being brutally honest yet incredibly supportive—a sounding board who pushes you to think sharper, move faster, and grow smarter.<br>
+        Because when your vision is clear, the hustle becomes meaningful.
+      </p>
+
+      <!-- ▶️ Play Icon -->
+      <div class="play-icon" id="playVideoBtn">▶</div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ About Video Modal -->
+<div class="video-modal" id="aboutVideoModal" style="display: none;">
+  <div class="video-content">
+    <span class="close-btn" id="closeAboutVideo">&times;</span>
+    <iframe
+      id="aboutVideoFrame"
+      src=""
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+
+
+
+
+*<section class="offerings-section">
+  <img src="images/core.png" alt="Offerings Image" class="offerings-image slide-in-right" />
+  <h2>CORE OFFERINGS</h2>
+
+  <ul class="offerings-list">
+    <li class="offering-item">
+      <div class="offering-header">
+        1: Business Coaching
+      </div>
+      <div class="offering-content">
+        <p>Personalised sessions designed for founders, business owners, and leaders to help you gain clarity, set direction, and stay accountable.</p>
+        <p>Founder support & conflict resolution</p>
+        <p>Mindset coaching for growth</p>
+        <p>Strategic planning & goal setting</p>
+        <p>Problem-solving & decision-making</p>
+        <a href="#" class="read-more-btn">Read More</a>
+      </div>
+    </li>
+    <li class="offering-item">
+      <div class="offering-header">
+        2: Startup & SME Growth Consulting
+      </div>
+      <div class="offering-content">
+        <p>From chaos to clarity—Premal helps scale early-stage and mid-sized businesses with practical, execution-driven strategies.</p>
+        <p>Business model refinement</p>
+        <p>Go-to-market strategy</p>
+        <p>Operations & team structuring</p>
+        <p>Financial hygiene & scalability</p>
+        <a href="#" class="read-more-btn">Read More</a>
+      </div>
+    </li>
+    <li class="offering-item">
+      <div class="offering-header">
+        3: Brand & Marketing Advisory
+      </div>
+      <div class="offering-content">
+        <p>With a deep understanding of storytelling and positioning, Premal helps businesses stand out in crowded markets.</p>
+        <p>Brand identity & narrative building</p>
+        <p>Digital marketing strategy</p>
+        <p>Social media presence</p>
+        <p>Customer experience design</p>
+        <a href="#" class="read-more-btn">Read More</a>
+      </div>
+    </li>
+    <li class="offering-item">
+      <div class="offering-header">
+        4: Workshops & Masterclasses
+      </div>
+      <div class="offering-content">
+        <p>High-energy, interactive sessions designed for founders, teams, or forums like BNI, YPO, EO, and startup incubators.</p>
+        <p>Vision & goal alignment</p>
+        <p>Leadership & communication</p>
+        <p>Sales mastery & networking</p>
+        <p>Entrepreneurial mindset & innovation</p>
+        <a href="#" class="read-more-btn">Read More</a>
+      </div>
+    </li>
+    <li class="offering-item">
+      <div class="offering-header">
+        5: Mentorship for Aspiring Entrepreneurs
+      </div>
+      <div class="offering-content">
+        <p>For those at the start line—Premal offers guided mentorship to help turn ideas into action.</p>
+        <p>Idea validation</p>
+        <p>Launch roadmap</p>
+        <p>Fundraising readiness</p>
+        <p>Building your first team</p>
+        <a href="#" class="read-more-btn">Read More</a>
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+
+<section class="success-stories">
+  <h2 class="section-title">SUCCESS STORIES</h2>
+
+  <!-- Story 1 -->
+  <div id="story-card-1" class="story-box sky slide-in-left">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make specimen book. a type
+    </p>
+    <h3>RAJENDRA DESAI</h3>
+    <span>ABC - Director</span>
+  </div>
+
+  <!-- ✅ Video Thumbnail -->
+  <div class="story-img-wrapper slide-in-right">
+    <img src="images/video.png" alt="Video Story" />
+    <div class="play-btn video-play">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
+    <polygon points="6,4 20,12 6,20" />
+  </svg>
+</div>
+
+  </div>
+
+  <!-- Main Image -->
+  <img src="images/premal-smile.jpg" class="story-img slide-up" alt="Story 2" />
+
+  <!-- Story 2 -->
+  <div id="story-card-2" class="story-box sky slide-in-left">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.  ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+    <h3>SOMIYA MOTWANI</h3>
+    <span>ABC - Director</span>
+  </div>
+
+  <!-- Image -->
+  <img src="images/image.png" class="story-img slide-in-right" alt="Story 3" />
+
+  <!-- Story 3 -->
+  <div id="story-card-3" class="story-box white slide-in-left">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make specimen book. a type
+    </p>
+  </div>
+</section>
+
+<!-- ✅ Story Video Modal -->
+<div class="video-modal" id="storyVideoModal" style="display: none;">
+  <div class="video-content">
+    <span class="close-btn" id="closeStoryVideo">&times;</span>
+    <iframe id="storyVideoFrame" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+
+
+
+
+<section class="cta-no-card-section">
+  <p class="intro-text-no-card">
+    Start your #100x journey or scale smarter. Let's talk, or whatever fits best
+  </p>
+
+  <div class="image-with-buttons-container-no-card">
+    <img src="images/discovery_video.jpg" alt="Lecturer on stage" class="main-overlay-image-no-card" />
+
+    <!-- ▶️ Play Button -->
+    <div class="overlay-play-button-no-card cta-video-play">&#9658;</div>
+
+    <!-- CTA Button -->
+    <a href="#" class="overlay-cta-button-no-card">CTA: Book a free discovery call</a>
+  </div>
+</section>
+
+<!-- ✅ Video Modal -->
+<div class="video-modal" id="ctaVideoModal" style="display: none;">
+  <div class="video-content">
+    <span class="close-btn" id="closeCtaVideo">&times;</span>
+    <iframe
+      id="ctaVideoFrame"
+      src=""
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+
+
+
+
+
+
+<section class="testimonials-section">
+  <h2 class="testimonials-title">TESTIMONIALS</h2>
+  <div class="testimonials-wrapper" id="testimonialSlider">
+    <div class="testimonial-card">
+      <img src="images/person1.png" alt="Sujata Chauhan">
+      <p class="testimonial-text"> Lorem ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <p class="testimonial-author">Sujata Chauhan, ABC - Director</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="images/person2.png" alt="Surendra Jain">
+      <p class="testimonial-text"> Lorem ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <p class="testimonial-author">Trishal Jain, ABC Director</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="images/person3.png" alt="Trishal Jain">
+      <p class="testimonial-text"> Lorem ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <p class="testimonial-author">Sujata Chauhan, ABC Director -</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="images/person4.png" alt="Samiksha Kamble">
+      <p class="testimonial-text"> Lorem ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <p class="testimonial-author">Samiksha Kamble, ABC Director</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="images/person5.png" alt="Pushkar Paul">
+      <p class="testimonial-text"> Lorem ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <p class="testimonial-author">Surendra - ABC Director</p>
+    </div>
+  </div>
+
+  <!-- ✅ Dot Indicators -->
+  <div class="dot-indicators" id="testimonialDots"></div>
+</section>
+
+
+
+<!-- Footer Start -->
+<footer class="custom-footer">
+  <!-- 🖼️ Background Image -->
+  <img src="Images/footer-bg.jpg" alt="Footer Background" class="footer-bg" />
+
+  <!-- 🌐 Overlay Content -->
+  <div class="footer-overlay-content">
+    <!-- ✅ Logo with Zoom-in -->
+    <img src="Images/logo.png" alt="Logo" class="footer-logo zoom-in" />
+
+    <!-- ✅ Social Icons -->
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-x-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin-in"></i>
+    </div>
+
+    <hr class="footer-line" />
+
+    <!-- ✅ Footer Menu -->
+    <div class="footer-menu">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">CTA: Book a Free Discovery Call</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <hr class="footer-line" />
+
+    <!-- ✅ Bottom Text with Slide-in Animations -->
+    <div class="footer-bottom">
+      <span class="slide-in-left">@2025, Premal Shah, All Rights Reserved</span>
+      <span class="slide-in-right">Designed and developed by Creaa Designs</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ✅ Floating Buttons -->
+<div class="floating-buttons">
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919876543210" class="float-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scroll Top Button -->
+  <button id="scrollTopBtn" class="float-btn scroll-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</div>
+
+
+
+
+</body>
+
+<script>
+  // ✅ Hamburger Toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.getElementById('testimonialSlider');
+    const dotsContainer = document.getElementById('testimonialDots');
+    const cards = wrapper.querySelectorAll('.testimonial-card');
+
+    if (!wrapper || !dotsContainer || cards.length === 0) return;
+
+    let current = 0;
+
+    // ✅ Dot Create
+    cards.forEach((_, i) => {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('span');
+
+    function goToSlide(index) {
+      const cardWidth = cards[0].offsetWidth;
+      wrapper.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
+
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+      current = index;
+    }
+
+    function nextSlide() {
+      let next = (current + 1) % cards.length;
+      goToSlide(next);
+    }
+
+    // ✅ Autoplay only in Mobile
+    let interval = null;
+    if (window.innerWidth <= 768) {
+      interval = setInterval(nextSlide, 4000);
+    }
+
+    // ✅ Manual scroll dot update
+    wrapper.addEventListener('scroll', () => {
+      const scrollLeft = wrapper.scrollLeft;
+      const cardWidth = cards[0].offsetWidth;
+      const index = Math.round(scrollLeft / cardWidth);
+
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+      current = index;
+    });
+
+    // ✅ Manual dot click
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        if (interval) clearInterval(interval);
+        goToSlide(index);
+        if (window.innerWidth <= 768) {
+          interval = setInterval(nextSlide, 500);
+        }
+      });
+    });
+  });
+</script>
+
+  <script>
+    // Your JavaScript code here
+document.addEventListener('DOMContentLoaded', function() {
+  const offeringHeaders = document.querySelectorAll('.offering-header');
+
+  offeringHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const parentItem = this.closest('.offering-item');
+      const content = parentItem.querySelector('.offering-content');
+
+      // Check if this item is already active
+      const isActive = parentItem.classList.contains('active');
+
+      // Close all other open items first
+      offeringHeaders.forEach(otherHeader => {
+        const otherParentItem = otherHeader.closest('.offering-item');
+        if (otherParentItem !== parentItem && otherParentItem.classList.contains('active')) {
+          otherParentItem.classList.remove('active');
+          otherParentItem.querySelector('.offering-content').style.maxHeight = '0';
+        }
+      });
+
+      // Now, toggle the current item
+      if (!isActive) { // Only open if it was not already active
+        parentItem.classList.add('active');
+        // Set max-height to scrollHeight + a small buffer (e.g., 20px)
+        // This ensures enough space for padding and the button.
+        content.style.maxHeight = (content.scrollHeight + 20) + 'px';
+      } else {
+        parentItem.classList.remove('active');
+        content.style.maxHeight = '0';
+      }
+    });
+  });
+});
+  </script>
+
+<script>
+  function toggleMenu(icon) {
+    icon.classList.toggle("active");
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("active");
+  }
+</script>
+
+<script>
+  // যতগুলো slide-up আইটেম আছে সেগুলোকে খুঁজে বের করো
+  const slideUps = document.querySelectorAll('.slide-up');
+
+  const showOnScroll = () => {
+    slideUps.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', showOnScroll);
+  window.addEventListener('load', showOnScroll);
+</script>
+
+<script>
+  const zoomElements = document.querySelectorAll('.zoom-in');
+
+  function handleScrollZoom() {
+    zoomElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScrollZoom);
+  window.addEventListener('load', handleScrollZoom);
+</script>
+
+<script>
+  const slideInRightElements = document.querySelectorAll('.slide-in-right');
+
+  const onScrollSlideRight = () => {
+    slideInRightElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', onScrollSlideRight);
+  window.addEventListener('load', onScrollSlideRight); // Initial load check
+</script>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // একবার animate করার পর আর observe করবে না
+      }
+    });
+  });
+
+  document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-up').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+<script>
+  const aboutPlayBtn = document.getElementById("playVideoBtn");
+  const aboutModal = document.getElementById("aboutVideoModal");
+  const closeAboutBtn = document.getElementById("closeAboutVideo");
+  const aboutVideoFrame = document.getElementById("aboutVideoFrame");
+
+  aboutPlayBtn.addEventListener("click", () => {
+    aboutVideoFrame.src = "https://www.youtube.com/embed/XHOmBV4js_E?autoplay=1";
+    aboutModal.style.display = "flex";
+  });
+
+  closeAboutBtn.addEventListener("click", () => {
+    aboutModal.style.display = "none";
+    aboutVideoFrame.src = "";
+    aboutVideoFrame.removeAttribute("src"); // 🧹 Cache clear
+  });
+</script>
+
+
+
+<script>
+  const storyPlayBtn = document.querySelector('.video-play');
+  const storyModal = document.getElementById('storyVideoModal');
+  const storyCloseBtn = document.getElementById('closeStoryVideo');
+  const storyIframe = document.getElementById('storyVideoFrame');
+
+  storyPlayBtn.addEventListener('click', () => {
+    storyIframe.src = "https://www.youtube.com/embed/XHOmBV4js_E?autoplay=1";
+    storyModal.style.display = "flex";
+  });
+
+  storyCloseBtn.addEventListener('click', () => {
+    storyModal.style.display = "none";
+    storyIframe.src = "";
+  });
+</script>
+
+
+<script>
+  const ctaPlayBtn = document.querySelector('.cta-video-play');
+  const ctaModal = document.getElementById('ctaVideoModal');
+  const closeCtaBtn = document.getElementById('closeCtaVideo');
+  const ctaVideoFrame = document.getElementById('ctaVideoFrame');
+
+  ctaPlayBtn.addEventListener('click', () => {
+    // ✅ ভিডিও লোড করো ইউজার ক্লিক করলে
+    ctaVideoFrame.src = "https://www.youtube.com/embed/XHOmBV4js_E?autoplay=1";
+    ctaModal.style.display = 'flex';
+  });
+
+  closeCtaBtn.addEventListener('click', () => {
+    ctaModal.style.display = 'none';
+    ctaVideoFrame.src = ""; // বন্ধ করলে ভিডিও বন্ধ
+  });
+</script>
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.addEventListener("scroll", () => {
+    scrollBtn.style.display = window.scrollY > 200 ? "flex" : "none";
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+
+</html>
