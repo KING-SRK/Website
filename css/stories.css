@@ -5,7 +5,7 @@
 }
 
 .section-title {
-  color: #b80202;
+  color: #02AEB8;
   font-size: 20px;
   font-weight: 100;
   letter-spacing: 1px;
@@ -225,4 +225,14 @@
   .story-box h3 {
     font-size: 16px;
   }
+}
+.zoom-in-deep {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.zoom-in-deep.visible {
+  opacity: 1;
+  transform: scale(1);
 }

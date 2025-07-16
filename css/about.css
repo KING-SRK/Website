@@ -29,9 +29,10 @@
 .about-text {
   background-color: #02AEB8;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   padding: 20px;
+  letter-spacing: 1px;
   padding-bottom: 60px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -53,16 +54,19 @@
   background: white;
   color: #02AEB8;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 30px; /* একটু কমালে ভালো মাঝখানে বসে */
+  font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
+  line-height: 1; /* মাঝখানে বসাতে সহায়তা করে */
 }
+
 
 /* 🎬 Video Modal Styles */
 .video-modal {
@@ -75,12 +79,11 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
-  align-items: center;  /* ✅ স্ক্রল হলেও vertically মাঝখানে */
-  justify-content: center; /* ✅ horizontally মাঝখানে */
-  overflow: hidden; /* ✅ scroll disable */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   backdrop-filter: blur(2px);
 }
-
 
 /* ⬛ Video Box */
 .video-content {
@@ -107,7 +110,7 @@
   font-size: 28px;
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
-  padding: 6px 10px;
+  padding: 1px 10px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 1001;
@@ -124,3 +127,19 @@
   opacity: 1;
   transform: scale(1);
 }
+
+/* 🆕 Scroll Reveal (Slide Up) */
+.zoom-para {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.8s ease-out;
+  margin: 20px 0; /* ⬅️ Top & bottom space যেন সুন্দরভাবে থাকে */
+  line-height: 1.7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.zoom-para.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+

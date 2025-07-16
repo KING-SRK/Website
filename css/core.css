@@ -14,7 +14,7 @@ body {
   max-width: 800px;
   margin: 0px auto; /* Added margin-top for better spacing */
   background: #ffffff;
-  padding: 0px 20px;
+  padding: 30px 20px;
   text-align: left;
   border-radius: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -24,8 +24,8 @@ body {
 .offerings-section::after {
   content: "";
   display: block;
-  height: 1px;
-  background-color: #0a0909; /* উপরের দাগের রঙের সঙ্গে মিলিয়ে */
+  height: 0.5px;
+  background-color: #222; /* উপরের দাগের রঙের সঙ্গে মিলিয়ে */
   margin-top: 20px;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .offering-item {
-  border-bottom: 1px solid #0a0909; /* Lighter border for subtler look */
+  border-bottom: 1px solid #222; /* Lighter border for subtler look */
   margin-bottom: 0; /* No margin between items */
 }
 
@@ -115,7 +115,7 @@ body {
   margin-bottom: 8px;
   font-size: 14px;
   line-height: 1.6;
-  color: #555;
+  color: #222;
 }
 
 /* ❌ প্রথম p বাদ, ✅ শুধু পরেরগুলোর আগে dot দেখাও */
@@ -161,4 +161,15 @@ body {
 .slide-in-right.visible {
   opacity: 1;
   transform: translateX(0);
+}
+.slide-up-para {
+  opacity: 0;
+  transform: translateY(80px) scale(0.85);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  margin-bottom: 16px; /* মাঝখানে কিছুটা বেশি স্পেস */
+}
+
+.slide-up-para.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }

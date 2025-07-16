@@ -15,3 +15,4 @@ const observer = new IntersectionObserver(entries => {
 });
 
 animatedItems.forEach(el => observer.observe(el));
+
