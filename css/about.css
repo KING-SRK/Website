@@ -1,3 +1,18 @@
+/* ✅ Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
 .about-section {
   padding: 0px 10px;
   background-color: #ffffff;
@@ -46,7 +61,7 @@
   margin-bottom: 0;
 }
 
-/* ▶️ Play Icon */
+/* ▶ Play Icon */
 .play-icon {
   position: absolute;
   bottom: 15px;
@@ -59,62 +74,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px; /* একটু কমালে ভালো মাঝখানে বসে */
+  font-size: 28px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
-  line-height: 1; /* মাঝখানে বসাতে সহায়তা করে */
+  line-height: 1;
 }
 
-
-/* 🎬 Video Modal Styles */
-.video-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  backdrop-filter: blur(2px);
-}
-
-/* ⬛ Video Box */
-.video-content {
-  position: relative;
-  width: 90%;
-  max-width: 640px;
-  background: #000;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-}
-
-.video-content iframe {
-  width: 100%;
-  height: 360px;
-  display: block;
-}
-
-/* ❌ Close Button */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 28px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1px 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1001;
-}
 
 /* 🔍 Zoom-In Animation */
 .zoom-in {
@@ -133,7 +100,7 @@
   opacity: 0;
   transform: scale(0.7);
   transition: all 0.8s ease-out;
-  margin: 20px 0; /* ⬅️ Top & bottom space যেন সুন্দরভাবে থাকে */
+  margin: 20px 0;
   line-height: 1.7;
   font-family: 'Montserrat', sans-serif;
 }
@@ -143,3 +110,41 @@
   transform: scale(1);
 }
 
+
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.video-content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background-color: #000;
+  aspect-ratio: 16 / 9; /* Automatically keeps 16:9 ratio */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+}
+
+.video-content iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}

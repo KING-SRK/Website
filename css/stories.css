@@ -1,3 +1,18 @@
+/* ✅ Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
 .success-stories {
   padding: 40px 10px;
   background-color: #fff;
@@ -164,49 +179,7 @@
   opacity: 1;
   transform: translateY(0);
 }
-.video-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-  padding: 20px;
-}
 
-/* ✅ Slightly taller and tightly fitted modal */
-.video-wrapper {
-  position: relative;
-  width: 90%;
-  max-width: 700px;
-  height: 400px; /* Fixed height instead of aspect-ratio */
-  background: black;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* ✅ Full iframe */
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  z-index: 1;
-}
 @media (max-width: 600px) {
   .play-btn {
     width: 38px;

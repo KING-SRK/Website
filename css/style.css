@@ -1,5 +1,6 @@
 /* ✅ Reset & Base */
-* {
+* 
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,6 +12,11 @@ body {
   height: 100%;
   background-color: #ffffff;
   overflow-x: hidden;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw;
 }
 
 /* ---------------------- HEADER ---------------------- */
@@ -103,7 +109,7 @@ nav a {
   top: 57px;
   left: 50%;
   transform: translateX(-50%);
-  height: 500px;
+  height: 0;
   z-index: 3;
 }
 
@@ -116,14 +122,16 @@ nav a {
 }
 
 .overlay-name h2 {
-  background: linear-gradient(to right, #ffffff, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Restore W00 Bold", sans-serif;
-  white-space: nowrap;
-  font-weight: 400;
-  margin-top: 348px;
+  white-space: nowrap;        /* ✅ এক লাইনে রাখে */
+  display: inline-block;      /* ✅ ইনলাইন ব্লকের মতো আচরণ */
+  font-size: 32px;
+  letter-spacing: 4px;
+  font-family: "Restore W00 Bold";
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.2;
 }
+
 
 /* ---------------------- QUOTE SECTION ---------------------- */
 .quote-section {
@@ -196,9 +204,18 @@ nav a {
     top: 20%;
   }
 
-  .overlay-name h2 {
-    font-size: 37px;
-  }
+.overlay-name h2 {
+  white-space: nowrap;        /* ✅ এক লাইনে রাখে */
+  display: inline-block;      /* ✅ ইনলাইন ব্লকের মতো আচরণ */
+  font-size: 32px;
+  margin-top: 382px;
+  letter-spacing: 4px;
+  font-family: "Restore W00 Bold";
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.2;
+}
+
 
   .quote-section {
     margin-top: -20px;

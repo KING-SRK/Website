@@ -1,3 +1,18 @@
+/* ✅ Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
 /* Ensure a consistent box model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -32,13 +47,16 @@ body {
 
 /* If you want an image at the top of the entire section */
 .offerings-image {
-  width: calc(100% + 40px); /* দুই পাশে 20px করে বাড়ালাম */
+  width: 100%;
   height: auto;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin: 0 -20px 20px -20px; /* দুই পাশে -margin দিয়ে থালালাম */
+  margin-bottom: 20px;
+  padding: 0 0px; /* ✅ দুই পাশে গ্যাপ রাখল */
+  box-sizing: border-box; /* ✅ padding সহেও সঠিক width রাখবে */
   display: block;
 }
+
 
 
 .offerings-section h2 {
@@ -172,4 +190,18 @@ body {
 .slide-up-para.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+@media (max-width: 480px) {
+  .offerings-section {
+    padding: 20px 10px;
+  }
+
+  .offering-header {
+    font-size: 16px;
+  }
+
+  .offering-content p {
+    font-size: 13px;
+  }
 }
