@@ -60,7 +60,6 @@ body {
 
 
 .offerings-section h2 {
-  /* Assuming 'Restore W00 Bold' is a custom font you'll include */
   /* For now, using a generic bold sans-serif */
   font-family: "Restore W00 Bold", sans-serif;
   color: #02AEB8; /* Teal color from the video */
@@ -198,7 +197,7 @@ body {
   }
 
   .offering-header {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .offering-content p {

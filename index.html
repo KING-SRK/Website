@@ -399,13 +399,31 @@
     <i class="fab fa-whatsapp"></i>
   </button>
 
+  <!-- ✅ Full Screen Chat Box -->
+  <div class="whatsapp-chat-full" id="whatsappChatBox">
+    <div class="whatsapp-chat-header">
+      <span>Premal Shah</span>
+      <span class="whatsapp-close-btn" id="closeChat">&times;</span>
+    </div>
+
+    <div class="whatsapp-chat-body">
+      <div class="chat-message"> Hi👋, welcome to <strong>Premal Shah</strong></div>
+      <div class="chat-message">Can we help you?</div>
+    </div>
+
+    <!-- ✅ Open Chat Button -->
+    <a href="https://wa.me/919999999999" target="_blank" class="open-chat-btn">
+      Open Chat <i class="fas fa-paper-plane chat-icon"></i>
+    </a>
+  </div>
+
   <!-- Scroll to Top -->
   <button class="float-btn scroll-top" id="scrollTopBtn">
     <i class="fas fa-chevron-up"></i>
   </button>
 </div>
 
-<!-- ✅ WhatsApp Chat Popup -->
+
 
 
 
@@ -735,6 +753,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     youtubePlayer.src = '';
     videoModal.style.display = 'none';
+  });
+</script>
+
+<script>
+  const whatsappBtn = document.getElementById("whatsappBtn");
+  const whatsappChatBox = document.getElementById("whatsappChatBox");
+  const closeChat = document.getElementById("closeChat");
+
+  whatsappBtn.addEventListener("click", () => {
+    whatsappChatBox.style.display = "flex";
+  });
+
+  closeChat.addEventListener("click", () => {
+    whatsappChatBox.style.display = "none";
   });
 </script>
 

@@ -237,7 +237,6 @@ nav a {
 
 
 /* ✅ Floating Buttons Container */
-/* ✅ Floating Buttons Container */
 .floating-buttons {
   position: fixed;
   bottom: max(20px, env(safe-area-inset-bottom));
@@ -250,7 +249,7 @@ nav a {
   pointer-events: auto;
 }
 
-/* ✅ Common Style for Both Buttons */
+/* ✅ Common Style for Floating Buttons */
 .float-btn {
   width: 60px;
   height: 60px;
@@ -268,7 +267,6 @@ nav a {
   text-decoration: none;
 }
 
-/* ✅ Fix WhatsApp Icon white underline */
 .float-btn i {
   text-decoration: none !important;
   line-height: 1;
@@ -280,42 +278,124 @@ nav a {
   transform: scale(1.1);
 }
 
-/* ✅ Scroll Top Button Style (Box Shape) */
+/* ✅ Scroll Button */
 .scroll-top {
   background-color: #02AEB8;
-  border-radius: 0px;
+  border-radius: 0;
   width: 30px;
   height: 30px;
   font-size: 20px;
 }
 
-/* ✅ Scroll Top Icon align */
 .scroll-top i {
   line-height: 1;
-  text-decoration: none;
 }
 
-/* ✅ Default hidden */
+/* ✅ Scroll Button Hidden by Default */
 #scrollTopBtn {
   display: none;
 }
+
+/* ✅ Bubble-in Animation */
 @keyframes bubbleIn {
-  0% {
-    transform: translateY(50px) scale(0.3);
-    opacity: 0;
-  }
-  60% {
-    transform: translateY(-10px) scale(1.1);
-    opacity: 1;
-  }
-  80% {
-    transform: translateY(0) scale(0.95);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
+  0% { transform: translateY(50px) scale(0.3); opacity: 0; }
+  60% { transform: translateY(-10px) scale(1.1); opacity: 1; }
+  80% { transform: translateY(0) scale(0.95); }
+  100% { transform: translateY(0) scale(1); }
 }
 
 #whatsappBtn {
-  animation: bubbleIn 0.8s ease-out 1;
+  animation: bubbleIn 0.8s ease-out;
 }
+
+/* ✅ Chat Box */
+.whatsapp-chat-full {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -3px 15px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 9998;
+  font-family: 'Montserrat', sans-serif;
+  animation: bubbleIn 0.4s ease-out;
+}
+
+/* ✅ Chat Header */
+.whatsapp-chat-header {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.whatsapp-close-btn {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* ✅ Chat Body */
+.whatsapp-chat-body {
+  padding: 15px 20px;
+  font-size: 15px;
+  color: #333;
+  background: #f7f7f7;
+}
+
+.chat-message {
+  background: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+/* ✅ Open Chat Button */
+.open-chat-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  padding: 14px 24px;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.open-chat-btn:hover {
+  background-color: #1ebe57;
+}
+
+/* ✅ Animation for Arrow Icon */
+.chat-icon {
+  transition: transform 0.3s ease;
+}
+
+.open-chat-btn:hover .chat-icon {
+  animation: flyArrow 0.6s ease-in-out;
+}
+
+@keyframes flyArrow {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
