@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
+  <!-- ✅ ফোনের জন্য CSS (default) -->
+
   <title>Premal Shah</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/about.css" />
@@ -19,23 +23,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+
+<!-- ✅ পিসির জন্য CSS (external folder) -->
+<link rel="stylesheet" href="pc-css/style-pc.css" media="screen and (min-width: 1024px)">
+<link rel="stylesheet" href="pc-css/about-pc.css" media="screen and (min-width: 1024px)">
+<link rel="stylesheet" href="pc-css/core-pc.css" media="screen and (min-width: 1024px)">
+<link rel="stylesheet" href="pc-css/stories-pc.css" media="screen and (min-width: 1024px)">
+<link rel="stylesheet" href="pc-css/cta-pc.css" media="screen and (min-width: 1024px)">
+<link rel="stylesheet" href="pc-css/testimonial-pc.css" media="screen and (min-width: 1024px)">
+<link rel="stylesheet" href="pc-css/footer-pc.css" media="screen and (min-width: 1024px)">
+
+
 </head>
 <body>
-
-<!-- ✅ Header Section -->
 <header>
-  <div class="logo">
+  <!-- মোবাইলের জন্য লোগো -->
+  <div class="logo mobile-only">
     <img src="images/logo.png" alt="Premal Shah Logo" />
   </div>
 
-  <!-- Hamburger/Close Icon -->
+  <!-- মেনু আইকন -->
   <div class="menu-icon" onclick="toggleMenu(this)">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <!-- ✅ Navigation Links -->
+  <!-- মেনু লিংক -->
   <nav id="nav-links">
     <a href="#">Home</a>
     <a href="#">About Us</a>
@@ -46,19 +60,24 @@
   </nav>
 </header>
 
-
-
-<!-- Hero Section -->
 <section class="hero">
+  <!-- ব্যাকগ্রাউন্ড ইমেজ -->
   <img src="images/bg.jpg" alt="Background" class="bg-img" />
-  <img src="images/premal.png" alt="Premal Shah" class="hero-png" />
 
+  <!-- মোবাইলের জন্য পৃথক Premal Shah -->
+  <img src="images/premal.png" alt="Premal Shah" class="hero-png mobile-only" />
+
+  <!-- পিসির জন্য একত্র ইমেজ -->
+  <div class="merged-hero pc-only">
+    <img src="images/merged-hero-pc.png" alt="Premal & Logo Combined" />
+  </div>
+
+  <!-- টেক্সট -->
   <div class="overlay-name">
     <h2>PREMAL SHAH</h2>
   </div>
 </section>
 
-<!-- ✅ শুধু এই অংশে slide-up animate হবে -->
 <section class="quote-section slide-up">
   <div class="quote-card">
     <p>
@@ -67,6 +86,8 @@
     </p>
   </div>
 </section>
+
+
 
 
 
@@ -764,11 +785,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeChat = document.getElementById("closeChat");
 
   whatsappBtn.addEventListener("click", () => {
-    whatsappChatBox.style.display = "flex";
+    whatsappChatBox.classList.add("active");  // ✅ This triggers the animation
   });
 
   closeChat.addEventListener("click", () => {
-    whatsappChatBox.style.display = "none";
+    whatsappChatBox.classList.remove("active");  // ✅ This hides it with animation
   });
 </script>
 

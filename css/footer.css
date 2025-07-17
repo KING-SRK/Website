@@ -97,37 +97,7 @@ body {
   gap: 5px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-.footer-bg {
-  width: 100%;
-  display: block;
-  height: 600px; /* ইচ্ছেমতো height এখানে কমাও */
-  object-fit: contain; /* ইমেজ কাটবে না, সম্পূর্ণ দেখাবে */
-}
 
-
-  .footer-logo {
-    width: 220px;
-    margin-top: 50px;
-  }
-
-  .social-icons {
-    font-size: 25px;
-    margin-bottom: 0px;
-    gap: 25px;
-  }
-
-  .footer-menu {
-    font-size: 14px;
-       text-align: left;
-    gap: 8px;
-  }
-
-  .footer-bottom {
-    font-size: 13px;
-  }
-}
 /* ✅ Zoom-in Animation (Logo) */
 .zoom-in {
   opacity: 0;
@@ -159,4 +129,37 @@ body {
 .slide-in-right.visible {
   opacity: 1;
   transform: translateX(0);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+.footer-bg {
+  width: 100%;
+  display: block;
+  height: 700px; /* ইচ্ছেমতো height এখানে কমাও */
+  object-fit: contain; /* ইমেজ কাটবে না, সম্পূর্ণ দেখাবে */
+}
+
+
+  .footer-logo {
+    width: 220px;
+    margin-top: 50px;
+  }
+
+  .social-icons {
+    font-size: 25px;
+    margin-bottom: 0px;
+    gap: 25px;
+  }
+
+  .footer-menu {
+    font-size: 14px;
+       text-align: left;
+    gap: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
 }

@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-
+.merged-hero {
+display: none;
+}
 body {
   width: 100%;
   height: 100%;
@@ -333,98 +335,149 @@ nav a {
   100% { transform: translateY(0) scale(1); }
 }
 
+/* ✅ Animation for the WhatsApp Button */
 #whatsappBtn {
   animation: bubbleIn 0.8s ease-out;
 }
 
-/* ✅ Chat Box */
+/* ✅ Full Chat Box */
 .whatsapp-chat-full {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-  background: white;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0 -3px 15px rgba(0,0,0,0.2);
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  max-width: 90%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   display: none;
   flex-direction: column;
   z-index: 9998;
   font-family: 'Montserrat', sans-serif;
-  animation: bubbleIn 0.4s ease-out;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(100%) scale(0.95);
+  transition: all 0.4s ease-out;
+}
+
+.whatsapp-chat-full.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* ✅ Chat Header */
 .whatsapp-chat-header {
-  background-color: #25D366;
+  background-color: #25d366;
   color: white;
-  padding: 12px 20px;
-  font-weight: bold;
+  padding: 14px 16px;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 15px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
+.whatsapp-chat-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp-chat-header img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .whatsapp-close-btn {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* ✅ Chat Body */
 .whatsapp-chat-body {
-  padding: 15px 20px;
-  font-size: 15px;
-  color: #333;
-  background: #f7f7f7;
+  padding: 16px;
+  background: #ffffff;
+  font-size: 14px;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 260px;
+  overflow-y: auto;
 }
 
 .chat-message {
+  position: relative;
   background: white;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 16px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  color: #222;
+  padding: 14px 18px;
+  border-radius: 22px;
+  max-width: 80%;
+  line-height: 1.5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  align-self: flex-start;
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+.chat-message::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 14px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right-color: white;
+}
+
+.chat-message.user {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  border-radius: 22px;
+  margin-right: 8px;
+}
+
+.chat-message.user::after {
+  left: auto;
+  right: -6px;
+  border-right-color: transparent;
+  border-left-color: #dcf8c6;
 }
 
 /* ✅ Open Chat Button */
 .open-chat-btn {
+  background-color: #25d366;
+  color: white;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-size: 17px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #25D366;
-  color: #fff;
-  font-weight: 600;
-  font-size: 16px;
-  border: none;
-  padding: 14px 24px;
-  width: 100%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
+  margin: 16px auto;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: background 0.3s;
 }
 
 .open-chat-btn:hover {
-  background-color: #1ebe57;
+  background-color: #1eb85d;
 }
 
-/* ✅ Animation for Arrow Icon */
-.chat-icon {
-  transition: transform 0.3s ease;
+.joinchat_open_icon {
+    flex-shrink: 0;
+    width: var(--s);
+    height: var(--s);
+    max-width: var(--s);
+    padding: calc(var(--s) * 0.18);
+    margin: 0;
+    overflow: hidden;
 }
-
-.open-chat-btn:hover .chat-icon {
-  animation: flyArrow 0.6s ease-in-out;
-}
-
-@keyframes flyArrow {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(6px); }
-  100% { transform: translateX(0); }
-}
-

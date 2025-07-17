@@ -204,7 +204,7 @@ body {
   .story-box h3 {
     font-size: 16px;
   }
-}
+
 .zoom-in-deep {
   opacity: 0;
   transform: scale(0.7);

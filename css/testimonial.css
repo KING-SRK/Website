@@ -98,7 +98,6 @@ body {
     background: #ccc;
     border-radius: 50%;
     display: inline-block;
-    transition: background 0.3s;
   }
 
   .dot-indicators span.active {

@@ -186,6 +186,7 @@ body {
   margin-bottom: 16px; /* মাঝখানে কিছুটা বেশি স্পেস */
 }
 
+
 .slide-up-para.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
