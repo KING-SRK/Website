@@ -107,10 +107,11 @@
         class="hero-png mobile-only"
       />
 
-      <!-- পিসির জন্য একত্র ইমেজ -->
+      <!-- পিসির জন্য logo ar photo alada -->
       <div class="merged-hero pc-only">
-        <img src="images/merged-hero-pc.png" alt="Premal & Logo Combined" />
-      </div>
+  <img src="images/logo.png" alt="Logo" class="hero-logo" />
+  <img src="images/premal_background.jpg" alt="Premal Shah" class="hero-bg" />
+</div>
 
       <!-- টেক্সট -->
       <div class="overlay-name">
@@ -127,14 +128,23 @@
       </div>
     </section>
 
+    <!-- ✅ HTML -->
     <section class="about-section">
       <h2>WHO IS PREMAL SHAH?</h2>
 
       <div class="about-content">
+        <!-- মোবাইলের জন্য ছবি -->
         <img
           src="images/premal-speaking.png"
           alt="Premal Shah Speaking"
-          class="about-image"
+          class="about-image mobile-only"
+        />
+
+        <!-- পিসির জন্য ছবি -->
+        <img
+          src="images/premal-speaking1.png"
+          alt="Premal Shah PC"
+          class="about-image pc-only"
         />
 
         <div class="about-text">
@@ -176,11 +186,17 @@
     </section>
 
     <section class="offerings-section">
+        <!-- ✅ র‍্যাপার যোগ করা হয়েছে -->
+  <div class="offerings-wrapper">
+    <!-- ডান পাশে থাকবে -->
       <img
         src="images/core.png"
         alt="Offerings Image"
         class="offerings-image slide-in-right"
       />
+
+          <!-- বাম পাশে থাকবে -->
+    <div class="offerings-text-wrapper">
       <h2>CORE OFFERINGS</h2>
 
       <ul class="offerings-list">
@@ -287,8 +303,7 @@
             <polygon points="6,4 20,12 6,20" />
           </svg>
         </div>
-
-        
+      </div>
 
       <!-- Main Image -->
       <img
@@ -486,60 +501,59 @@
 
     <!-- ✅ Floating WhatsApp & Scroll Button -->
     <div class="floating-buttons">
-
-<div
-  class="joinchat joinchat--right"
-  data-settings='{"telephone":"919222933333","mobile_only":false,"button_delay":0,"whatsapp_web":false,"qr":false,"message_views":2,"message_delay":-10,"message_badge":false,"message_send":"Hi *Premal Shah*! I need more info about Premal Shah https://projects.synergynexa.com/ps/","message_hash":"6edde014"}'
->
-  <div class="joinchat__button" role="button" tabindex="0"></div>
-  <div
-    class="joinchat__chatbox"
-    role="dialog"
-    aria-labelledby="joinchat__label"
-    aria-modal="true"
-  >
-    <div class="joinchat__header">
-      <div id="joinchat__label">
-        <span>Premal Shah</span>
-      </div>
       <div
-        class="joinchat__close"
-        role="button"
-        tabindex="0"
-        aria-label="Close"
-      ></div>
-    </div>
-    <div class="joinchat__scroll">
-      <div class="joinchat__content">
-        <div class="joinchat__chat">
-          <div class="joinchat__bubble">
-            <jc-rand><jc-opt>Hi</jc-opt><jc-opt>Hello</jc-opt></jc-rand> 👋,
-            welcome to <strong>Premal Shah</strong>
+        class="joinchat joinchat--right"
+        data-settings='{"telephone":"919222933333","mobile_only":false,"button_delay":0,"whatsapp_web":false,"qr":false,"message_views":2,"message_delay":-10,"message_badge":false,"message_send":"Hi *Premal Shah*! I need more info about Premal Shah https://projects.synergynexa.com/ps/","message_hash":"6edde014"}'
+      >
+        <div class="joinchat__button" role="button" tabindex="0"></div>
+        <div
+          class="joinchat__chatbox"
+          role="dialog"
+          aria-labelledby="joinchat__label"
+          aria-modal="true"
+        >
+          <div class="joinchat__header">
+            <div id="joinchat__label">
+              <span>Premal Shah</span>
+            </div>
+            <div
+              class="joinchat__close"
+              role="button"
+              tabindex="0"
+              aria-label="Close"
+            ></div>
           </div>
-          <div class="joinchat__bubble">Can we help you?</div>
-        </div>
-        <div class="joinchat__open" role="button" tabindex="0">
-          <div class="joinchat__open__text">Open Chat</div>
-          <svg
-            class="joinchat__open__icon"
-            width="60"
-            height="60"
-            viewbox="0 0 400 400"
-          >
-            <path
-              class="joinchat__pa"
-              d="M168.83 200.504H79.218L33.04 44.284a1 1 0 0 1 1.386-1.188L365.083 199.04a1 1 0 0 1 .003 1.808L34.432 357.903a1 1 0 0 1-1.388-1.187l29.42-99.427"
-            />
-            <path
-              class="joinchat__pb"
-              d="M318.087 318.087c-52.982 52.982-132.708 62.922-195.725 29.82l-80.449 10.18 10.358-80.112C18.956 214.905 28.836 134.99 81.913 81.913c65.218-65.217 170.956-65.217 236.174 0 42.661 42.661 57.416 102.661 44.265 157.316"
-            />
-          </svg>
+          <div class="joinchat__scroll">
+            <div class="joinchat__content">
+              <div class="joinchat__chat">
+                <div class="joinchat__bubble">
+                  <jc-rand><jc-opt>Hi</jc-opt><jc-opt>Hello</jc-opt></jc-rand>
+                  👋, welcome to <strong>Premal Shah</strong>
+                </div>
+                <div class="joinchat__bubble">Can we help you?</div>
+              </div>
+              <div class="joinchat__open" role="button" tabindex="0">
+                <div class="joinchat__open__text">Open Chat</div>
+                <svg
+                  class="joinchat__open__icon"
+                  width="60"
+                  height="60"
+                  viewbox="0 0 400 400"
+                >
+                  <path
+                    class="joinchat__pa"
+                    d="M168.83 200.504H79.218L33.04 44.284a1 1 0 0 1 1.386-1.188L365.083 199.04a1 1 0 0 1 .003 1.808L34.432 357.903a1 1 0 0 1-1.388-1.187l29.42-99.427"
+                  />
+                  <path
+                    class="joinchat__pb"
+                    d="M318.087 318.087c-52.982 52.982-132.708 62.922-195.725 29.82l-80.449 10.18 10.358-80.112C18.956 214.905 28.836 134.99 81.913 81.913c65.218-65.217 170.956-65.217 236.174 0 42.661 42.661 57.416 102.661 44.265 157.316"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
       <!-- Scroll to Top -->
       <button class="float-btn scroll-top" id="scrollTopBtn">

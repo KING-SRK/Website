@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -14,7 +14,9 @@ body {
 }
 
 /* Ensure a consistent box model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -44,7 +46,6 @@ body {
   margin-top: 20px;
 }
 
-
 /* If you want an image at the top of the entire section */
 .offerings-image {
   width: 100%;
@@ -57,12 +58,10 @@ body {
   display: block;
 }
 
-
-
 .offerings-section h2 {
   /* For now, using a generic bold sans-serif */
   font-family: "Restore W00 Bold", sans-serif;
-  color: #02AEB8; /* Teal color from the video */
+  color: #02aeb8; /* Teal color from the video */
   font-size: 20px;
   font-weight: 100;
   margin-bottom: 20px;
@@ -114,7 +113,8 @@ body {
 .offering-content {
   max-height: 0; /* Hidden by default */
   overflow: hidden;
-  transition: max-height 0.3s ease-out, padding-top 0.3s ease-out, padding-bottom 0.3s ease-out; /* Smooth transition */
+  transition: max-height 0.3s ease-out, padding-top 0.3s ease-out,
+    padding-bottom 0.3s ease-out; /* Smooth transition */
   padding: 0 0px; /* No initial padding */
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
@@ -146,15 +146,13 @@ body {
   line-height: 1.6;
 }
 
-
-
 .offering-content p:last-of-type {
   margin-bottom: 15px; /* More space before the button */
 }
 
 .read-more-btn {
   display: inline-block;
-  background-color: #02AEB8; /* Teal background for the button */
+  background-color: #02aeb8; /* Teal background for the button */
   color: #ffffff;
   padding: 8px 15px;
   border-radius: 20px; /* Slightly rounded corners */
@@ -166,7 +164,7 @@ body {
 }
 
 .read-more-btn:hover {
-  background-color: #02AEB8; /* Darker teal on hover */
+  background-color: #02aeb8; /* Darker teal on hover */
 }
 /* ডানদিকের স্ক্রিনের একেবারে বাইরে থেকে */
 .slide-in-right {
@@ -185,7 +183,6 @@ body {
   transition: opacity 0.9s ease-out, transform 0.9s ease-out;
   margin-bottom: 16px; /* মাঝখানে কিছুটা বেশি স্পেস */
 }
-
 
 .slide-up-para.visible {
   opacity: 1;

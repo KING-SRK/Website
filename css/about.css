@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 
 .about-section h2 {
   font-size: 21px;
-  color: #02AEB8;
+  color: #02aeb8;
   margin-bottom: 20px;
   letter-spacing: 3px;
   font-weight: 300;
@@ -41,8 +41,12 @@ body {
   margin-bottom: -4px;
 }
 
+.about-image.mobile-only {
+  display: none;
+}
+
 .about-text {
-  background-color: #02AEB8;
+  background-color: #02aeb8;
   color: #ffffff;
   font-size: 14px;
   line-height: 1.6;
@@ -61,14 +65,13 @@ body {
   margin-bottom: 0;
 }
 
-
 /* ▶ Play Icon */
 .play-icon {
   position: absolute;
   bottom: 15px;
   right: 15px;
   background: white;
-  color: #02AEB8;
+  color: #02aeb8;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -82,7 +85,6 @@ body {
   z-index: 10;
   line-height: 1;
 }
-
 
 /* 🔍 Zoom-In Animation */
 .zoom-in {
@@ -103,7 +105,7 @@ body {
   transition: all 0.8s ease-out;
   margin: 20px 0;
   line-height: 1.7;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .zoom-para.visible {
@@ -111,12 +113,13 @@ body {
   transform: scale(1);
 }
 
-
 .video-modal {
   display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
@@ -135,7 +138,8 @@ body {
 
 .video-content iframe {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: none;
@@ -143,9 +147,28 @@ body {
 
 .close-btn {
   position: absolute;
-  top: 10px; right: 15px;
+  top: 10px;
+  right: 15px;
   font-size: 24px;
   color: white;
   cursor: pointer;
   z-index: 10000;
+}
+
+@media screen and (min-width: 1024px) {
+  .about-image.mobile-only {
+    display: none;
+  }
+  .about-image.pc-only {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .about-image.pc-only {
+    display: none;
+  }
+  .about-image.mobile-only {
+    display: block;
+  }
 }
