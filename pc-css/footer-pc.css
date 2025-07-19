@@ -1,0 +1,40 @@
+@media screen and (min-width: 1024px) {
+  .footer-bg {
+    content: url("../Images/footer-bg-desktop.jpg"); /* পিসির জন্য ছবি */
+  }
+}
+.footer-bg {
+  width: 100vw;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+
+  /* 🛑 Mouse drag বন্ধ করার জন্য */
+  pointer-events: none;
+  user-drag: none;
+  -webkit-user-drag: none; /* Safari-এর জন্য */
+}
+@media screen and (min-width: 1024px) {
+  .footer-menu {
+    display: flex;
+    flex-wrap: wrap; /* লিংকগুলো জায়গা না থাকলে নিচে নামবে */
+    justify-content: center;
+    gap: 25px; /* লিংকগুলোর মাঝখানে ফাঁকা জায়গা */
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+
+  .footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .footer-menu a:hover {
+    text-decoration: underline;
+    color: #00fcd5;
+  }
+}

@@ -451,53 +451,60 @@
       <div class="dot-indicators" id="testimonialDots"></div>
     </section>
 
-    <!-- Footer Start -->
-    <footer class="custom-footer">
-      <!-- 🖼️ Background Image -->
-      <img
-        src="Images/footer-bg.jpg"
-        alt="Footer Background"
-        class="footer-bg"
-      />
+<!-- Footer Start -->
+<footer class="custom-footer">
+  <!-- 🖼️ Responsive Background Image -->
+  <picture>
+    <!-- ✅ পিসির জন্য বড় ছবি -->
+    <source media="(min-width: 1024px)" srcset="Images/footer-bg-desktop.jpg" />
+    <!-- ✅ মোবাইলের জন্য ডিফল্ট ছবি -->
+    <img
+      src="Images/footer-bg.jpg"
+      alt="Footer Background"
+      class="footer-bg"
+    />
+  </picture>
 
-      <!-- 🌐 Overlay Content -->
-      <div class="footer-overlay-content">
-        <!-- ✅ Logo with Zoom-in -->
-        <img src="Images/logo.png" alt="Logo" class="footer-logo zoom-in" />
+  <!-- 🌐 Overlay Content -->
+  <div class="footer-overlay-content">
+    <!-- ✅ Logo with Zoom-in -->
+    <img src="Images/logo.png" alt="Logo" class="footer-logo zoom-in" />
 
-        <!-- ✅ Social Icons -->
-        <div class="social-icons">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-x-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin-in"></i>
-        </div>
+    <!-- ✅ Social Icons -->
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-x-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin-in"></i>
+    </div>
 
-        <hr class="footer-line" />
+    <hr class="footer-line" />
 
-        <!-- ✅ Footer Menu -->
-        <div class="footer-menu">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Services</a>
-          <a href="#">CTA: Book a Free Discovery Call</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
-        </div>
+    <!-- ✅ Footer Menu -->
+    <div class="footer-menu">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">CTA: Book a Free Discovery Call</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
 
-        <hr class="footer-line" />
+    <hr class="footer-line" />
 
-        <!-- ✅ Bottom Text with Slide-in Animations -->
-        <div class="footer-bottom">
-          <span class="slide-in-left"
-            >@2025, Premal Shah, All Rights Reserved</span
-          >
-          <span class="slide-in-right"
-            >Designed and developed by Creaa Designs</span
-          >
-        </div>
-      </div>
-    </footer>
+    <!-- ✅ Bottom Text with Slide-in Animations -->
+    <div class="footer-bottom">
+      <span class="slide-in-left"
+        >@2025, Premal Shah, All Rights Reserved</span
+      >
+      <span class="slide-in-right"
+        >Designed and developed by Creaa Designs</span
+      >
+    </div>
+  </div>
+</footer>
+
+
 
     <!-- ✅ Floating WhatsApp & Scroll Button -->
     <div class="floating-buttons">
@@ -574,67 +581,98 @@
   </script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const wrapper = document.getElementById("testimonialSlider");
-      const dotsContainer = document.getElementById("testimonialDots");
-      const cards = wrapper.querySelectorAll(".testimonial-card");
+  document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.getElementById("testimonialSlider");
+    const dotsContainer = document.getElementById("testimonialDots");
+    const cards = wrapper.querySelectorAll(".testimonial-card");
 
-      if (!wrapper || !dotsContainer || cards.length === 0) return;
+    if (!wrapper || !dotsContainer || cards.length === 0) return;
 
-      let current = 0;
+    let current = 0;
 
-      // ✅ Dot Create
-      cards.forEach((_, i) => {
-        const dot = document.createElement("span");
-        if (i === 0) dot.classList.add("active");
-        dotsContainer.appendChild(dot);
-      });
+    // ✅ Dot Create
+    cards.forEach((_, i) => {
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+    });
 
-      const dots = dotsContainer.querySelectorAll("span");
+    const dots = dotsContainer.querySelectorAll("span");
 
-      function goToSlide(index) {
-        const cardWidth = cards[0].offsetWidth;
-        wrapper.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+    function goToSlide(index) {
+      const cardWidth = cards[0].offsetWidth + 20; // Including gap
+      wrapper.scrollTo({ left: cardWidth * index, behavior: "smooth" });
 
-        dots.forEach((dot) => dot.classList.remove("active"));
-        if (dots[index]) dots[index].classList.add("active");
-        current = index;
-      }
+      dots.forEach((dot) => dot.classList.remove("active"));
+      if (dots[index]) dots[index].classList.add("active");
+      current = index;
+    }
 
-      function nextSlide() {
-        let next = (current + 1) % cards.length;
-        goToSlide(next);
-      }
+    function nextSlide() {
+      let next = (current + 1) % cards.length;
+      goToSlide(next);
+    }
 
-      // ✅ Autoplay only in Mobile
-      let interval = null;
-      if (window.innerWidth <= 768) {
-        interval = setInterval(nextSlide, 4000);
-      }
+    // ✅ Autoplay only in Mobile
+    let interval = null;
+    if (window.innerWidth <= 768) {
+      interval = setInterval(nextSlide, 4000);
+    }
 
-      // ✅ Manual scroll dot update
-      wrapper.addEventListener("scroll", () => {
-        const scrollLeft = wrapper.scrollLeft;
-        const cardWidth = cards[0].offsetWidth;
-        const index = Math.round(scrollLeft / cardWidth);
+    // ✅ Manual scroll dot update
+    wrapper.addEventListener("scroll", () => {
+      const scrollLeft = wrapper.scrollLeft;
+      const cardWidth = cards[0].offsetWidth + 20;
+      const index = Math.round(scrollLeft / cardWidth);
 
-        dots.forEach((dot) => dot.classList.remove("active"));
-        if (dots[index]) dots[index].classList.add("active");
-        current = index;
-      });
+      dots.forEach((dot) => dot.classList.remove("active"));
+      if (dots[index]) dots[index].classList.add("active");
+      current = index;
+    });
 
-      // ✅ Manual dot click
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          if (interval) clearInterval(interval);
-          goToSlide(index);
-          if (window.innerWidth <= 768) {
-            interval = setInterval(nextSlide, 500);
-          }
-        });
+    // ✅ Dot click navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        if (interval) clearInterval(interval);
+        goToSlide(index);
+        if (window.innerWidth <= 768) {
+          interval = setInterval(nextSlide, 5000);
+        }
       });
     });
-  </script>
+
+    // ✅ Mouse drag scroll (PC/desktop)
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    wrapper.addEventListener("mousedown", (e) => {
+      isDown = true;
+      wrapper.classList.add("dragging");
+      startX = e.pageX - wrapper.offsetLeft;
+      scrollLeft = wrapper.scrollLeft;
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+      isDown = false;
+      wrapper.classList.remove("dragging");
+    });
+
+    wrapper.addEventListener("mouseup", () => {
+      isDown = false;
+      wrapper.classList.remove("dragging");
+    });
+
+    wrapper.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - wrapper.offsetLeft;
+      const walk = (x - startX) * 1.5; // scroll speed multiplier
+      wrapper.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
+
 
   <script>
     // Your JavaScript code here

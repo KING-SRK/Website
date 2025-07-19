@@ -13,6 +13,7 @@ body {
   overflow-x: hidden;
 }
 
+/* ✅ Testimonials Section */
 .testimonials-section {
   padding: 60px 0px;
   background-color: #fff;
@@ -22,7 +23,7 @@ body {
 
 .testimonials-title {
   color: #009ead;
-  font-size: 22px;
+  font-size: 45px;
   font-family: "Restore W00 Bold";
   font-weight: 100;
   margin-bottom: 10px;
@@ -32,13 +33,22 @@ body {
 /* ✅ Scrollable wrapper */
 .testimonials-wrapper {
   display: flex;
-  flex-wrap: nowrap; /* prevent wrapping */
-  overflow-x: auto; /* horizontal scroll */
+  flex-wrap: nowrap;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   gap: 20px;
   padding: 10px 30px 20px;
+  cursor: grab;
+
+  user-select: none; /* ✅ টেক্সট সিলেক্ট হবে না */
+  -webkit-user-drag: none; /* ✅ ইমেজ ড্র্যাগ বন্ধ */
+}
+
+.testimonials-wrapper.dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
 
 /* ✅ Scrollbar style (optional) */
@@ -62,33 +72,39 @@ body {
   box-sizing: border-box;
   text-align: left;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  user-select: none; /* ✅ কার্ড select হবে না */
 }
 
 .testimonial-card img {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 15px;
+  pointer-events: none; /* ✅ ইমেজে click বা drag disable */
+  user-select: none;
 }
 
 .testimonial-text {
-  font-size: 16px;
+  font-size: 20px;
   color: #444;
   font-weight: 300;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   margin-bottom: 10px;
+  user-select: none;
 }
 
 .testimonial-author {
-  font-size: 17px;
+  font-size: 21px;
   font-weight: 500;
   letter-spacing: 1px;
   color: #333;
+  user-select: none;
 }
 
 /* ✅ Mobile Responsive */
 @media (max-width: 768px) {
   .testimonial-card {
-    width: 85%; /* প্রায় ফুল স্ক্রিন */
+    width: 85%;
   }
 }
 
