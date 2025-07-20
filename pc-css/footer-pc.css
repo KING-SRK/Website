@@ -3,38 +3,112 @@
     content: url("../Images/footer-bg-desktop.jpg"); /* পিসির জন্য ছবি */
   }
 }
+/* ✅ Footer Base */
+.custom-footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .footer-bg {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: block;
-  margin: 0 auto;
   object-fit: cover;
-
-  /* 🛑 Mouse drag বন্ধ করার জন্য */
-  pointer-events: none;
-  user-drag: none;
-  -webkit-user-drag: none; /* Safari-এর জন্য */
 }
-@media screen and (min-width: 1024px) {
+
+.footer-overlay-content {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 40px 5%;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ✅ Logo Style */
+.footer-logo {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* ✅ Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 20px;
+}
+
+/* ✅ Menu */
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px; /* আইটেমগুলোর মাঝে ফাঁকা */
+  font-weight: 100;
+  font-size: 18px;
+  flex-direction: row; /* পাশে পাশে বসানোর জন্য */
+}
+
+.footer-menu a,
+.footer-menu span {
+  color: white;
+  text-decoration: none;
+  white-space: nowrap; /* লম্বা লেখা এক লাইনে রাখবে */
+  font-weight: 300;
+  font-size: 17px;
+}
+
+/* ✅ Line */
+.footer-line {
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ✅ Bottom Text */
+/* Bottom Left-Right Text */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+/* ✅ Desktop specific style */
+@media (min-width: 1024px) {
+  .footer-overlay-content {
+    padding: 60px 10%;
+    top: 0px;
+  }
+
+  .footer-logo {
+    max-width: 160px;
+  }
+
   .footer-menu {
-    display: flex;
-    flex-wrap: wrap; /* লিংকগুলো জায়গা না থাকলে নিচে নামবে */
-    justify-content: center;
-    gap: 25px; /* লিংকগুলোর মাঝখানে ফাঁকা জায়গা */
-    margin: 20px 0;
-    padding: 0 10px;
+    gap: 40px;
+    font-size: 20px;
   }
 
-  .footer-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.3s;
+  .social-icons {
+    font-size: 24px;
   }
 
-  .footer-menu a:hover {
-    text-decoration: underline;
-    color: #00fcd5;
+  .footer-bottom {
+    font-size: 18px;
+    margin-top: 20px;
   }
 }

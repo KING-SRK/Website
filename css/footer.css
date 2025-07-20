@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
   background-color: #ffffff;
   width: 100%;
   overflow: hidden;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: white;
 }
 
@@ -97,7 +97,6 @@ body {
   gap: 5px;
 }
 
-
 /* ✅ Zoom-in Animation (Logo) */
 .zoom-in {
   opacity: 0;
@@ -131,16 +130,14 @@ body {
   transform: translateX(0);
 }
 
-
 /* Responsive */
 @media (max-width: 768px) {
-.footer-bg {
-  width: 100%;
-  display: block;
-  height: 700px; /* ইচ্ছেমতো height এখানে কমাও */
-  object-fit: contain; /* ইমেজ কাটবে না, সম্পূর্ণ দেখাবে */
-}
-
+  .footer-bg {
+    width: 100%;
+    display: block;
+    height: 700px; /* ইচ্ছেমতো height এখানে কমাও */
+    object-fit: contain; /* ইমেজ কাটবে না, সম্পূর্ণ দেখাবে */
+  }
 
   .footer-logo {
     width: 220px;
@@ -155,11 +152,21 @@ body {
 
   .footer-menu {
     font-size: 14px;
-       text-align: left;
+    text-align: left;
     gap: 8px;
   }
 
   .footer-bottom {
     font-size: 13px;
+  }
+}
+/* ✅ মোবাইলের জন্য ভিন্ন layout */
+@media screen and (max-width: 768px) {
+  .footer-menu {
+    flex-direction: column;
+  }
+
+  .footer-menu span {
+    display: none; /* মোবাইলে | চিহ্ন সরিয়ে দিবে */
   }
 }

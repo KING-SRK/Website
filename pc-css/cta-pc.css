@@ -1,0 +1,122 @@
+.cta-no-card-section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+}
+
+.image-with-buttons-container-no-card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  background-image: none; /* মোবাইলের জন্য ডিফল্ট */
+}
+
+/* ✅ পিসির জন্য background image যুক্ত করো */
+@media (min-width: 1024px) {
+  .image-with-buttons-container-no-card {
+    background-image: url("../Images/discovery_video-desktop.jpg");
+    background-size: 95%; /* ⬅️ 100% থেকে ছোট করলাম */
+    background-repeat: no-repeat;
+    background-position: center center;
+    aspect-ratio: 16 / 9;
+    background-color: transparent;
+  }
+}
+
+/* ▶️ প্লে বাটন */
+.overlay-play-button-no-card {
+  position: absolute;
+  top: 180px; /* আগের 15px → এখন 5px */
+  left: 100px; /* আগের 15px → এখন 5px */
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.overlay-play-button-no-card::before {
+  content: "";
+  position: absolute;
+  left: 52%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid #242121;
+}
+
+.overlay-play-button-no-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* CTA বাটন */
+.overlay-cta-button-no-card {
+  position: absolute;
+  bottom: 140px;
+  font-family: "Montserrat", sans-serif;
+  left: 85%;
+  transform: translateX(-50%);
+  display: inline-block;
+  background-color: #02aeb8;
+  color: #ffffff;
+  padding: 35px 0px; /* ⬅️ padding বড় করলাম */
+  border-radius: 35px; /* ⬅️ গোলাকৃতি আরও একটু */
+  text-decoration: none;
+  font-size: 16px; /* ⬅️ font size একটু বাড়ানো হলো */
+  font-weight: 400;
+  letter-spacing: 1px;
+  z-index: 2;
+  width: calc(100% - 10px);
+  max-width: 320px; /* ⬅️ চওড়া একটু বাড়ানো হলো */
+}
+
+.overlay-cta-button-no-card:hover {
+  background-color: #02aeb8;
+}
+/* <img> একদমই দরকার নেই তাই এটাকে বাদ দাও */
+.main-overlay-image-no-card {
+  display: none !important;
+}
+/* ✅ ছোট স্ক্রিন (ট্যাব ও মোবাইল) এর জন্য প্লে বাটন ও CTA বাটনের অবস্থান ঠিক করা */
+@media (max-width: 1023px) {
+  .overlay-play-button-no-card {
+    top: 50%; /* স্ক্রিন মাঝামাঝি */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+  }
+
+  .overlay-play-button-no-card::before {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #242121;
+  }
+
+  .overlay-cta-button-no-card {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 280px; /* ⬅️ মোবাইলে একটু বড় করলাম */
+    font-size: 15px; /* ⬅️ font size একটু বড় */
+    padding: 12px 18px; /* ⬅️ padding একটু বড় */
+  }
+}

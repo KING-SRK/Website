@@ -1,0 +1,194 @@
+.success-stories {
+  text-align: center;
+  padding: 0px 20px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.success-stories h2 {
+  font-size: 28px;
+  font-weight: 100;
+  color: #00bcd4;
+  margin-bottom: 0px;
+  font-family: "Restore W00 Bold";
+  letter-spacing: 1px;
+}
+
+.top-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-img {
+  width: 1450px;
+  border-radius: 20px;
+}
+
+/* ===== Top Cards ===== */
+
+.story-box {
+  position: absolute;
+  width: 260px;
+  background-color: #0eaec0;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 300;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.story-box strong {
+  font-family: "Restore W00 Bold"; /* তুমি যে ফন্ট চাও সেটা এখানে দাও */
+  font-size: 18px;
+  font-weight: 100;
+  color: #ffffff; /* চাইলে রঙও পাল্টাতে পারো */
+  letter-spacing: 2.5px;
+}
+
+/* Left Card */
+.left-card {
+  top: 70px;
+  width: 450px;
+  height: 230px;
+  left: 40px;
+}
+
+/* Right Card */
+.right-card {
+  top: 70px;
+  right: 100px;
+  width: 300px;
+  height: 250px;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 45px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(128, 128, 128, 0.607); /* gray transparent */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: rgba(0, 184, 217, 0.6);
+}
+
+.triangle-success {
+  width: 0;
+  height: 0;
+  border-left: 12px solid rgb(255, 255, 255);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+/* ===== Bottom Section ===== */
+
+.bottom-row {
+  position: relative;
+  height: 0;
+  margin-top: 100px;
+}
+
+/* Left Bottom Box - Video */
+.left-bottom {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: 60px;
+  left: 200px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.left-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-bottom {
+  position: absolute;
+  width: 750px;
+  height: 450px;
+  bottom: 0px;
+  right: 0px;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.right-bottom img {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  padding: 10px;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* ✅ নতুন লেখার বক্স */
+.right-bottom-text {
+  position: relative;
+  z-index: 2;
+  color: #333;
+  top: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 300px;
+  margin-left: 140px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 390;
+  text-align: left;
+  font-size: 18px;
+}
+
+.right-bottom-text strong {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* মোবাইলে layout ভেঙে ফেলার জন্য */
+@media screen and (max-width: 768px) {
+  .top-row {
+    display: block;
+  }
+
+  .story-box {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .left-bottom,
+  .right-bottom {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .right-bottom-text {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .play-button {
+    right: 10px;
+    bottom: 10px;
+  }
+}
